@@ -5,11 +5,11 @@
 
 
 <div align="center">
-    <h1>PiliNara</h1>
+    <h1>PiliYuki</h1>
 <div align="center">
     
 </div>
-    <p>基于PiliPlus做了一些自用修改</p>
+    <p>基于PiliNara做了一些自用修改</p>
     
 <img src="assets/screenshots/510shots_so.png" width="32%" alt="home" />
 <img src="assets/screenshots/174shots_so.png" width="32%" alt="home" />
@@ -22,10 +22,14 @@
 
 <br/>
 
+> **施工中提示**  
+> 本仓库目前为 **PiliNara** 的 Fork 版本，README 和部分文档暂未完全修改，仍保留上游内容。  
+> 后续我会逐步替换为 **PiliYuki** 的专属说明，感谢理解！
+
 ## 项目说明
-- 本项目PiliNara是基于[PiliPlus](https://github.com/bggRGjQaUbCoE/PiliPlus)进行修改的,做了一些自用的改动.
-- 本仓库保留了PiliPlus的所有功能,并在此基础上进行了部分自用的优化和调整.支持导入PiliPlus的设置和数据，也应该支持了导出设置和数据到PiliPlus.
-- 本项目会定期同步PiliPlus的更新,并在此基础上进行修改和优化.
+- 本项目PiliYuki是基于[PiliNara](https://github.com/Starfallan/PiliNara)进行修改的,做了一些自用的改动.
+- 本仓库保留了PiliNara的所有功能,并在此基础上进行了部分自用的优化和调整.支持导入PiliYuki的设置和数据，也应该支持了导出设置和数据到PiliYuki.
+- 本项目会定期同步PiliYuki的更新,并在此基础上进行修改和优化.
 - 本项目仅供个人学习和测试使用，目前只打包了安卓版本,如有需要请自行Fork后编译.
 - 有啥需要的功能或者想法欢迎提issue或者PR,我会尽量抽时间进行开发和完善.
 - 本人开发水平有限，可能存在一些bug和不完善的地方，欢迎提交issue和PR.
@@ -37,7 +41,7 @@
 Fork特性：
 
 **基础适配与界面**
-- [x] 应用名称由PiliPlus更改为PiliNara，做了各平台相应替换以实现共存
+- [x] 应用名称由PiliNara更改为PiliYuki，做了各平台相应替换以实现共存
 - [x] 修复Flutter在澎湃小窗下无法正常显示的问题，参考Flutter官方issue [#161086](https://github.com/flutter/flutter/issues/161086)，该问题似乎在HyperOS3上被修复
    修复方案参考了[venera/pull/467](https://github.com/venera-app/venera/pull/467)
 - [x] 支持自定义「我的」页面卡片顺序和显示数量
@@ -302,13 +306,18 @@ yay -S pilinara-bin
 
 <br/>
 
+> **📌 当前状态**  
+> 本 README 的“改动说明”“功能列表”等内容目前仍沿用上游 PiliNara 的描述，  
+> 我将在未来版本中逐步更新为 PiliYuki 的实际改动。所有功能均以实际代码为准。
+
 ## 声明
 
-此项目（PiliNara）是个人为了兴趣而开发，仅用于学习和测试，请于下载后24小时内删除。
+此项目（PiliYuki）是个人为了兴趣而开发，仅用于学习和测试，请于下载后24小时内删除。
 所用API皆从官方网站收集，不提供任何破解内容。
 在此致敬原作者：[guozhigq/pilipala](https://github.com/guozhigq/pilipala)
 在此致敬上游作者：[orz12/PiliPalaX](https://github.com/orz12/PiliPalaX)
 在此致敬上游作者：[bggRGjQaUbCoE/PiliPlus](https://github.com/bggRGjQaUbCoE/PiliPlus)
+在此致敬上游作者：[Starfallan/PiliNara](https://github.com/Starfallan/PiliNara)
 本仓库做了一些自用修改，感谢原作者的开源精神。
 
 感谢使用
