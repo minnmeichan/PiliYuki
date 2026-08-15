@@ -104,10 +104,14 @@ jobs:
       - name: Rename APKs
         shell: bash
         run: |
-          for file in build/app/outputs/flutter-apk/app-*-release.apk; do
-            abi=$(echo "$file" | sed -E 's|.*app-(.*)-release\.apk|\1|')
-            mv "$file" "PiliNara_android_${{ env.version }}_${abi}.apk"
-          done
+          if [ -f build/app/outputs/flutter-apk/app-release.apk ]; then
+            mv build/app/outputs/flutter-apk/app-release.apk "PiliNara_android_${{ env.version }}_arm64-v8a.apk"
+          else
+            for file in build/app/outputs/flutter-apk/app-*-release.apk; do
+              abi=$(echo "$file" | sed -E 's|.*app-(.*)-release\.apk|\1|')
+              mv "$file" "PiliNara_android_${{ env.version }}_${abi}.apk"
+            done
+          fi
 
       - name: Release
         if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.tag != '' }}
