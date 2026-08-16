@@ -93,6 +93,9 @@ jobs:
         shell: pwsh
         run: lib/scripts/build.ps1 android
 
+      - name: Clean build
+        run: flutter clean
+
       - name: Flutter Build Release Apk
         if: ${{ github.event_name == 'workflow_dispatch' }}
         run: flutter build apk --release --target-platform android-arm64 --dart-define-from-file=pili_release.json --pub
