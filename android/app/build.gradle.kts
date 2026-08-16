@@ -51,7 +51,6 @@ android {
             keyPassword = keyProperties.getProperty("keyPassword")
             enableV1Signing = true
             enableV2Signing = true
-            signingName = "YUKI"
         }
     }
 
