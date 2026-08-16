@@ -38,15 +38,6 @@ android {
         }
     }
 
-    splits {
-        abi {
-            enable = true
-            reset()
-            include("arm64-v8a")
-            universalApk = false
-        }
-    }
-
     packagingOptions.jniLibs.useLegacyPackaging = true
 
     val keyProperties = Properties().also {
