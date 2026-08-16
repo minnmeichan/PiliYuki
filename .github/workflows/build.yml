@@ -98,7 +98,7 @@ jobs:
 
       - name: Flutter Build Release Apk
         if: ${{ github.event_name == 'workflow_dispatch' }}
-        run: flutter build apk --release --target-platform android-arm64 --dart-define-from-file=pili_release.json --pub
+        run: flutter build apk --release --split-per-abi --dart-define-from-file=pili_release.json --pub
 
       - name: Flutter Build Dev Apk
         if: ${{ github.event_name == 'pull_request' }}
@@ -107,14 +107,10 @@ jobs:
       - name: Rename APKs
         shell: bash
         run: |
-          if [ -f build/app/outputs/flutter-apk/app-release.apk ]; then
-            mv build/app/outputs/flutter-apk/app-release.apk "PiliYuki_android_${{ env.version }}_arm64-v8a.apk"
-          else
-            for file in build/app/outputs/flutter-apk/app-*-release.apk; do
-              abi=$(echo "$file" | sed -E 's|.*app-(.*)-release\.apk|\1|')
-              mv "$file" "PiliYuki_android_${{ env.version }}_${abi}.apk"
-            done
-          fi
+          for file in build/app/outputs/flutter-apk/app-*-release.apk; do
+            abi=$(echo "$file" | sed -E 's|.*app-(.*)-release\.apk|\1|')
+            mv "$file" "PiliYuki_android_${{ env.version }}_${abi}.apk"
+          done
 
       - name: Release
         if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.tag != '' }}
