@@ -107,6 +107,13 @@ jobs:
           EOF
           cat android/key.properties
 
+      - name: Check keystore file
+        run: |
+          echo "=== 密钥文件是否存在及大小 ==="
+          ls -l android/app/yuki-release-key.jks
+          echo "=== 尝试用密码 Yuki337 读取密钥 ==="
+          keytool -list -keystore android/app/yuki-release-key.jks -storepass Yuki337 -alias Yuki
+
       - name: Flutter Build Release Apk
         if: ${{ github.event_name == 'workflow_dispatch' }}
         run: flutter build apk --release --split-per-abi --target-platform android-arm64 --dart-define-from-file=pili_release.json --pub
