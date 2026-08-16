@@ -33,9 +33,6 @@ android {
         targetSdk = 37
         versionCode = flutter.versionCode
         versionName = flutter.versionName
-        ndk {
-            abiFilters += "arm64-v8a"
-        }
     }
 
     packagingOptions.jniLibs.useLegacyPackaging = true
