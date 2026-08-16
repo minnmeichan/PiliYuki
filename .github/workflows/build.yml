@@ -105,11 +105,11 @@ jobs:
         shell: bash
         run: |
           if [ -f build/app/outputs/flutter-apk/app-release.apk ]; then
-            mv build/app/outputs/flutter-apk/app-release.apk "PiliNara_android_${{ env.version }}_arm64-v8a.apk"
+            mv build/app/outputs/flutter-apk/app-release.apk "PiliYuki_android_${{ env.version }}_arm64-v8a.apk"
           else
             for file in build/app/outputs/flutter-apk/app-*-release.apk; do
               abi=$(echo "$file" | sed -E 's|.*app-(.*)-release\.apk|\1|')
-              mv "$file" "PiliNara_android_${{ env.version }}_${abi}.apk"
+              mv "$file" "PiliYuki_android_${{ env.version }}_${abi}.apk"
             done
           fi
 
