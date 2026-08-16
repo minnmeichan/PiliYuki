@@ -24,6 +24,13 @@
 
 在此致敬原作者和上游作者的无私奉献。如有侵权请联系删除。
 
+## 适配平台
+
+- [x] Android
+
+[![Packaging status](https://repology.org/badge/vertical-allrepos/pilinara.svg)](https://repology.org/project/pilinara/versions)
+
+
 ## 上游的改动
 
 **基础适配与界面**
@@ -82,14 +89,7 @@
 - [x] 投币页面支持显示当天已获取经验数与经验上限
 
 
-## 适配平台
-
-- [x] Android
-
-[![Packaging status](https://repology.org/badge/vertical-allrepos/pilinara.svg)](https://repology.org/project/pilinara/versions)
-
-## refactor
-
+**refactor**
 - [ ] gRPC [wip]
 - [x] 用户界面
 - [x] 其他
