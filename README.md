@@ -28,8 +28,6 @@
 
 - [x] Android
 
-[![Packaging status](https://repology.org/badge/vertical-allrepos/pilinara.svg)](https://repology.org/project/pilinara/versions)
-
 
 ## 上游的改动
 
