@@ -127,7 +127,7 @@ jobs:
         with:
           archive: false
           name: Android_arm64-v8a
-          path: PiliNara_android_*_arm64-v8a.apk
+          path: PiliYuki_android_*_arm64-v8a.apk
 
   ios:
     if: ${{ (github.event_name == 'pull_request' && github.repository == 'Starfallan/PiliNara') || github.event.inputs.build_ios == 'true' }}
