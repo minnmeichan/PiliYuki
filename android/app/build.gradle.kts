@@ -40,10 +40,10 @@ android {
 
     splits {
         abi {
-            enable true
+            enable = true
             reset()
-            include "arm64-v8a"
-            universalApk false
+            include("arm64-v8a")
+            universalApk = false
         }
     }
 
