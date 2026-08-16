@@ -96,6 +96,16 @@ jobs:
       - name: Clean build
         run: flutter clean
 
+      - name: Decode keystore and setup signing
+        run: |
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > android/app/yuki-release-key.jks
+          cat > android/key.properties << EOF
+          storePassword=${{ secrets.STORE_PASSWORD }}
+          keyPassword=${{ secrets.KEY_PASSWORD }}
+          keyAlias=${{ secrets.KEY_ALIAS }}
+          storeFile=yuki-release-key.jks
+          EOF
+
       - name: Flutter Build Release Apk
         if: ${{ github.event_name == 'workflow_dispatch' }}
         run: flutter build apk --release --split-per-abi --target-platform android-arm64 --dart-define-from-file=pili_release.json --pub
